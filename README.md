@@ -16,6 +16,43 @@
 
 
 
+## credit_card-table
+|Column|Type|Options|
+|------|----|-------|
+|card_number|integer|unique: true, null: false|
+|expire_date|nteger|null: false|
+|security_code|integer|null: false|
+|user_id|references|null: false,foreign_key: true|
+
+### Association
+- belongs_to :user
+
+
+
+### sns_credential-table
+|Column|Type|Options|
+|------|----|-------|
+|uid|string|null: false,unique: true|
+|provider|string|null: false|
+|user_id|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+
+
+
+## user_reviews-table
+|Column|Type|Options|
+|------|----|-------|
+|buyer_id|references|null: false,foreign_key: true|
+|seller_id|references|null: false,foreign_key: true|
+|review|integer|null: false|
+
+### Association
+- belongs_to :user
+
+
+
 ## users_info-table
 |Column|Type|Options|
 |------|----|-------|
@@ -39,52 +76,29 @@
 
 
 
-## credit_card-table
-|Column|Type|Options|
-|------|----|-------|
-|card_number|integer|unique: true, null: false|
-|expire_date|nteger|null: false|
-|security_code|integer|null: false|
-|user_id|references|null: false,foreign_key: true|
-
-### Association
-- belongs_to :user
-
-
-
-## user_reviews-table
-|Column|Type|Options|
-|------|----|-------|
-|buyer_id|references|null: false,foreign_key: true|
-|seller_id|references|null: false,foreign_key: true|
-|review|integer|null: false|
-
-### Association
-- belongs_to :user
-
-
-
 ## items-table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |price|integer|null: false|
 |description|text||
-|size|string||
 |condition|string|null: false|
+|exhibition_status|string|null: false|
 |shipping_fee|string|null: false|
 |shipping_method|string|null: false|
 |shipping_region|string|null: false|
 |shipping_schedule|string|null: false|
-|saler_id|references|foreign_key: true|
+|seller_id|references|foreign_key: true|
 |buyer_id|references|foreign_key: true|
-|category_id|references|foreign_key: true|
-|exhibition_status|string|null: false|
+|bottom_category_id|references|foreign_key: true|
+|brand_id|references|foreign_key: true|
+|size_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
-- has_one :brand, dependent: :destroy
-- has_many :category, dependent: :destroy
+- belongs_to :brand
+- belongs_to :bottom_category
+- belongs_to :size
 - has_many :image, dependent: :destroy
 - has_many :likes, dependent: :destroy
 - has_many :comments, dependent: :destroy
@@ -117,54 +131,6 @@
 
 
 
-## brands-table
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|item_id|references|null: false,foreign_key: true|
-
-### Association
-- belongs_to :item
-
-
-## category_top-table
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|item_id|references|null: false,foreign_key: true|
-
-### Association
-- belongs_to :item
-- has_many :category_mids
-
-
-## category_mid-table
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|item_id|references|null: false,foreign_key: true|
-|categort_top_id|references|null: false,foreign_key: true|
-
-### Association
-- belongs_to :item
-- belongs_to :category_top
-- has_many :category_bottoms
-
-
-
-## category_bottom-table
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|item_id|references|null: false,foreign_key: true|
-|category_mid_id|references|null: false,foreign_key: true|
-
-### Association
-- belongs_to :item
-- belongs_to :category_mid
-
-
-
 ## images-table
 |Column|Type|Options|
 |------|----|-------|
@@ -176,14 +142,58 @@
 
 
 
-### sns_credential-table
+## brands-table
 |Column|Type|Options|
 |------|----|-------|
-|uid|string|null: false,unique: true|
-|provider|string|null: false|
-|user_id|references|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
-- belongs_to :user
+- has_many :items
+
+
+
+## sizes-table
+|Column|Type|Options|
+|------|----|-------|
+|size|string||
+
+### Association
+- has_many :items
+
+
+
+## bottom_categories-table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|mid_caregory_id|references|null: false,foreign_key: true|
+
+### Association
+- has_many :items
+- belongs_to :mid_category
+
+
+
+## mid_categories-table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|top_categories_id|references|null: false,foreign_key: true|
+
+### Association
+- belongs_to :top_category
+- has_many :bottoms_categories
+
+
+
+## top_categories-table
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :mid_categories
+
+
 
 
