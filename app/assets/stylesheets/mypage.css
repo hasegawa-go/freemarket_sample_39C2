@@ -1,0 +1,62 @@
+.l-content{
+  margin: 40px auto,0;
+  width: 700px;
+  float: right;
+}
+
+.mypage-user-icon{
+  height: 200px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+.l-side{
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+}
+
+.mypage-nav-list-item{
+  color: black;
+  text-align: left;
+  font-family: sans-serif;
+  min-height: 48px;
+  margin: 0;
+  line-height: 48px;
+  padding-left: 20px;
+}
+
+.mypage-nav-list{
+  margin-top: 8px;
+}
+
+li {
+  transition: 0.3s;
+  background-color: white;
+  list-style: none;
+  border: 1px solid #f5f5f5;
+  width: 280px;
+  height: 48px;
+}
+
+li:hover{
+  background-color: #eeeeee;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mypage-nav-head{
+  margin-top: 40px;
+  margin-left: 40px;
+}
