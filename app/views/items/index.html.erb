@@ -4,6 +4,7 @@
   <!--ヘッダーここまで -->
   <div class="main-contents">
     <div class="main-contents-images">
+      javascriptで画面遷移を実装予定
       <img src="https://www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?1621863497">
       <!-- 画像３枚をスクロールさせるjavascriptを実装 -->
     </div>
@@ -33,35 +34,96 @@
                 <img src="https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436">
               </figure>
               <div class="items-box-body">
-                <h3 class="items-box-name">商品名称</h3>
-              </div>
-              <div class="items-box-num clearfix">
-                <div class="items-box-price">
-                  ¥ 2,500
+                <h3 class="items-box-name font-2">（１）90's ヴィンテージ NIKE ビッグスウォッシュ</h3>
+                <div class="items-box-num">
+                  <div class="items-box-price font-5">
+                    ¥ 2,500
+                  </div>
+                  <div class="items-box-likes font-2">
+                    <%= fa_icon 'heart' %>
+                    <span>16</span>
+                  </div>
+                  <p class="item-box-tax">(税込)</p>
                 </div>
-                <div class="items-box-likes">
-                  <%= fa_icon 'heart' %>
-                  <span>16"いいね”の数</span>
-                </div>
-                <p class="item-box-tax">(税込)</p>
-              </div>
+            </div>
             </a>
           </section>
   <!-- １商品ここまで -->
           <section class="items-box">
-            font-awesome-railsのgemインストール実施要
+            <a href=" ">
+              <figure class="items-box-photo">
+                <img src="https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436">
+              </figure>
+              <div class="items-box-body">
+                <h3 class="items-box-name font-2">（２）90's ヴィンテージ NIKE ビッグスウォッシュ</h3>
+                <div class="items-box-num">
+                  <div class="items-box-price font-5">
+                    ¥ 2,500
+                  </div>
+                  <div class="items-box-likes font-2">
+                    <%= fa_icon 'heart' %>
+                    <span>16</span>
+                  </div>
+                  <p class="item-box-tax">(税込)</p>
+                </div>
+            </div>
+            </a>
           </section>
           <section class="items-box">
-            3
+            <a href=" ">
+              <figure class="items-box-photo">
+                <img src="https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436">
+              </figure>
+              <div class="items-box-body">
+                <h3 class="items-box-name font-2">（３）90's ヴィンテージ NIKE ビッグスウォッシュ</h3>
+                <div class="items-box-num">
+                  <div class="items-box-price font-5">
+                    ¥ 2,500
+                  </div>
+                  <div class="items-box-likes font-2">
+                    <%= fa_icon 'heart' %>
+                    <span>16</span>
+                  </div>
+                  <p class="item-box-tax">(税込)</p>
+                </div>
+            </div>
+            </a>
           </section>
           <section class="items-box">
-            4
+            <a href=" ">
+              <figure class="items-box-photo">
+                <img src="https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436">
+              </figure>
+              <div class="items-box-body">
+                <h3 class="items-box-name font-2">（４）90's ヴィンテージ NIKE ビッグスウォッシュ</h3>
+                <div class="items-box-num">
+                  <div class="items-box-price font-5">
+                    ¥ 2,500
+                  </div>
+                  <div class="items-box-likes font-2">
+                    <%= fa_icon 'heart' %>
+                    <span>16</span>
+                  </div>
+                  <p class="item-box-tax">(税込)</p>
+                </div>
+            </div>
+            </a>
           </section>
+      </div>
+      <div class="view-all">
+            <a href=" ">すべての商品を見る</a>
+      </div>
+      <div class="items-box-container clearfix">
+        <h3 class="text-center">
+         <a href="/jp/category/2/">
+          メンズ 新着アイテム
+          </a>
+        </h3>
       </div>
     </div>
   </div>
 <!-- フッターここから -->
   <%= render partial: "/layouts/footer" %>
 <!-- フッターここまで -->
-
+</div>
 </div>
