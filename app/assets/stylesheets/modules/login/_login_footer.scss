@@ -1,0 +1,26 @@
+.login {
+  &__footer{
+    height: 250px;
+    text-align: center;
+    z-index: 1;
+    padding: 40px 0;
+    &__logo{
+      width: 80px;
+      height: 65px;
+      text-decoration: none;
+    }
+    &__logo img{
+      margin: 40px auto 0;
+      text-align: center;
+    }
+    &__li{
+      display: inline-block;
+      margin: 0 0 0 16px;
+      font-size: 12px;
+      list-style: none;
+    }
+    &__li:hover{
+      text-decoration: underline;
+    }
+  }
+}
