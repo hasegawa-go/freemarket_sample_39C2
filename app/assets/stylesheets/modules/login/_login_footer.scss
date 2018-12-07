@@ -18,9 +18,13 @@
       margin: 0 0 0 16px;
       font-size: 12px;
       list-style: none;
+      text-decoration: none;
     }
     &__li:hover{
       text-decoration: underline;
+    }
+    &__copyright{
+      font-size: 10px;
     }
   }
 }
