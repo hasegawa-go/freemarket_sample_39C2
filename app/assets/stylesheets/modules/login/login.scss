@@ -29,8 +29,7 @@
     color: #0099e8;
     font-size: 14px;
   }
-  input[type=email],
-  input[type=password] {
+  &__field {
     height: 28px;
     width: 294px;
     padding: 10px 16px 8px;

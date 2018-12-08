@@ -18,27 +18,30 @@
       padding: 20px;
       max-width: 320px;
       margin: 0 auto;
-      & label{
+
+      label{
         font-size: 14px;
         font-weight: bold;
         color: rgb(51, 51, 51);
-      }
-      &__required{
         margin-top: 20px;
-        font-size: 14px;
-        font-weight: bold;
-        color: rgb(51, 51, 51);
-        &__btn{
-          font-size: 8px;
-          font-weight:100;
-          color: #fff;
-          background-color: #ea352d;;
-          border-radius:2px;
-          display: inline-block;
-          position:relative;
-          padding: 3px 6px;
-          top: -2px;
-        }
+      }
+
+      &__required::after {
+        background-color: #ea352d;
+        content: "必須";
+        font-size: 8px;
+        font-weight:100;
+        color: #fff;
+        border-radius:2px;
+        display: inline-block;
+        margin-left: 8px;
+        position:relative;
+        padding: 3px 6px;
+        top: -2px;
+      }
+
+      &__field {
+        margin-bottom: 40px;
       }
     }
   }

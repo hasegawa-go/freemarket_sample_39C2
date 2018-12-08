@@ -5,38 +5,22 @@
     </div>
     <div class="registration__contents">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+        <!-- <#%= devise_error_messages! %> -->
 
 
-        <!-- ＊＊＊===ニックネームのカラムを生成が必要＝＝＝＊＊＊ -->
-
-        <div class="registration__contents__required">ニックネーム
-          <div class="registration__contents__required__btn">必須
-          </div>
-        </div>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "例）メルカリ花子" %>
-
-        <!-- ＊＊＊==================================================＊＊＊ -->
-
-        <div class="registration__contents__required">メールアドレス
-          <div class="registration__contents__required__btn">必須
-          </div>
-        </div>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可" %>
+        <%= f.label "ニックネーム", class: "registration__contents__required" %>
+        <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "例）メルカリ花子", class: "login__field registration__contents__field" %>
 
 
-         <div class="registration__contents__required">パスワード
-          <div class="registration__contents__required__btn">必須
-          </div>
-        </div>
-        <%= f.password_field :password, autocomplete: "new-password", placeholder: "パスワード６文字以上" %>
+        <%= f.label "メールアドレス", class: "registration__contents__required" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可", class: "login__field registration__contents__field" %>
 
 
-        <div class="registration__contents__required">パスワード（確認）
-          <div class="registration__contents__required__btn">必須
-          </div>
-        </div>
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード6文字以上" %>
+        <%= f.label "パスワード", class: "registration__contents__required" %>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: "パスワード６文字以上", class: "login__field registration__contents__field" %>
+
+        <%= f.label "パスワード（確認）", class: "registration__contents__required" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード6文字以上", class: "login__field registration__contents__field" %>
 
 
         <div class="g-recaptcha login-captcha" data-sitekey="6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc">
@@ -50,7 +34,6 @@
           </div>
           <p class="error-text">選択してください</p>
         </div>
-        <!-- <div class="registration__contents__btn"> -->
         <%= f.submit "次へ進む" , class:"login__button login__button__submit__next" %>
       <% end %>
     </div>
