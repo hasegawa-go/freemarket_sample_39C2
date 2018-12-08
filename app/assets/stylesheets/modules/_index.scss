@@ -1,6 +1,6 @@
 .main-contents-images {
-  background-color: $black;
-  color: $white;
+  background-color: #1F1F1F;
+  color: #FFF;
   height: 290px;
   img {
     height: 290px;
@@ -9,7 +9,7 @@
 
 .pickup-contents {
   padding: 40px;
-  background: $gray;
+  background: #f5f5f5;
   h2 {
     font-size: 28px;
     text-align: center;
@@ -25,7 +25,7 @@
     text-align: center;
   }
   a {
-    color: $light-blue;
+    color: #0099e8;
     text-decoration: none;
     font-weight: bold;
   }
@@ -39,7 +39,7 @@
       float: left;
       width: 48%;
       margin: 0 0 4% 4%;
-      background: $white;
+      background: #FFF;
       margin: 0 0 0 20px;
       width: 213px;
       a {
@@ -66,7 +66,7 @@
         .items-box-body {
           position: relative;
           padding: 16px 16px 0 16px;
-          background: $white;
+          background: #FFF;
           color: #333;
           .items-box-name {
             overflow: hidden;

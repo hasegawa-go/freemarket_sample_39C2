@@ -9,7 +9,7 @@
     width: 55%;
     height: 260px;
     margin: 0 auto;
-    color: $white;
+    color: #FFF;
     .app-banner-inner {
       position: absolute;
       top: 25%;
@@ -74,7 +74,7 @@
   padding: 60px 0;
   text-align: center;
   background-color: #212121;
-  color: $white;
+  color: #FFF;
   .footer_nav {
     width: 80%;
     margin: 0 auto;
@@ -97,7 +97,7 @@
       a {
         margin: 0 auto;
         display: block;
-        color: $white;
+        color: #FFF;
         text-decoration: none;
       }
       .footer-first-child {
@@ -105,7 +105,7 @@
       }
       .footer-cell-children {
         display: block;
-        color: $white;
+        color: #FFF;
         font-size: 13px;
       }
       li {
@@ -123,20 +123,20 @@
       a {
         margin: 0 auto;
         display: block;
-        color: $white;
+        color: #FFF;
         text-decoration: none;
       }
       .footer-head {
         font-size: 16px;
         line-height: 1.4;
         font-weight: bold;
-        color: $white;
+        color: #FFF;
         padding-bottom: 24px;
       }
       .footer-cell-children {
         text-decoration: none;
         display: block;
-        color: $white;
+        color: #FFF;
         font-size: 13px;
         margin: 14px 0 0;
       }
@@ -172,7 +172,7 @@ nav {
   position: fixed;
   border-radius: 50%;
   background: #ea352d;
-  color: $white;
+  color: #FFF;
   text-align: center;
   text-decoration: none;
   div {
