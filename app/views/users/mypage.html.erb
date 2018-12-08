@@ -4,148 +4,96 @@
     <meta charset="utf-8">
     <title>Freemarket_sample_39c</title>
     <link rel="stylesheet" href="index.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="./user.js"></script>
   </header>
 
 
   <body>
-    <dev class="mypage">
+  <div class="mypage-main">
     <main class="l-container clearfix">
-      <div class="l-content">
-        <section class="mypage-user-icon">
-          <a href="https://www.mercari.com/jp/u/914898503/">
-            <figure>
-              <img src="//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png" alt="" width="60" height="60">
-            </figure>
-            <h2 class="bold">Mac</h2>
-            <div class="mypage-number">
-              <div>評価 <span class="bold">0</span></div>
-              <div>出品数 <span class="bold">0</span></div>
-            </div>
-          </a>
-        </section>
-
-        <section class="mypage-tab-container-notification-todo">
-
-          <ul class="mypage-tabs">
-            <li class="active">
-              <h3>
-                <a href="#mypage-tab-notification" data-toggle="tab">
-                  お知らせ
-                </a>
-              </h3>
-            </li>
-
-            <li class="">
-              <h3>
-                <a href="#mypage-tab-todo" data-toggle="tab">
-                  やることリスト
-                </a>
-              </h3>
-            </li>
-          </ul>
-
-          <div class="tab-content">
-            <ul id="mypage-tab-notification" class="mypage-item-list tab-pane active">
-              <li>
-                <a href="" class="mypage-item-link" data-open="modal" data-modal="banner">
-                  <figure>
-                    <img data-src="//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png" class=" lazyloaded" alt="" src="//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png">
-                  </figure>
-                  <div class="mypage-item-body">
-                    <div class="mypage-item-text">【メルカリ限定】「新しい地図」の地上波初番組「略してブラリク」を配信中！</div>
-                    <time><i class="icon-time"></i><span>3 日前</span></time>
-                  </div>
-                  <i class="icon-arrow-right"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.mercari.com/jp/mypage/point/" class="mypage-item-link">
-                  <figure>
-                    <img data-src="//static-mercari-jp.akamaized.net/images/mercari_profile.png" class=" lazyloaded" alt="" src="//static-mercari-jp.akamaized.net/images/mercari_profile.png">
-                  </figure>
-                  <div class="mypage-item-body">
-                    <div class="mypage-item-text">有効期限が近づいているポイントがあります</div>
-                    <time><i class="icon-time"></i><span>3 日前</span></time>
-                  </div>
-                  <i class="icon-arrow-right"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.mercari.com/jp/mypage/news/" class="mypage-item-link">
-                  <figure>
-                    <img data-src="//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png" class=" lazyloaded" alt="" src="//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png">
-                  </figure>
-                  <div class="mypage-item-body">
-                    <div class="mypage-item-text">事務局から個別メッセージ「【P600進呈】まずはポイントを利用して無料でメルカリのお買い物をご体験ください」</div>
-                    <time><i class="icon-time"></i><span>4 日前</span></time>
-                  </div>
-                  <i class="icon-arrow-right"></i>
-                </a>
-              </li>
-              <li>
-                <a href="" class="mypage-item-link" data-open="modal" data-modal="banner">
-                  <figure>
-                    <img data-src="//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png" class=" lazyloaded" alt="" src="//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png">
-                  </figure>
-                  <div class="mypage-item-body">
-                    <div class="mypage-item-text">【期間限定のお得情報】ファッションアイテムが売れたら“必ず“ポイントがもらえるキャンペーン開催中</div>
-                    <time><i class="icon-time"></i><span>4 日前</span></time>
-                  </div>
-                  <i class="icon-arrow-right"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.mercari.com/jp/mypage/point/" class="mypage-item-link">
-                  <figure>
-                    <img data-src="//static-mercari-jp.akamaized.net/images/mercari_profile.png" class=" lazyloaded" alt="" src="//static-mercari-jp.akamaized.net/images/mercari_profile.png">
-                  </figure>
-                  <div class="mypage-item-body">
-                    <div class="mypage-item-text">有効期限が近づいているポイントがあります</div>
-                    <time><i class="icon-time"></i><span>10 日前</span></time>
-                  </div>
-                  <i class="icon-arrow-right"></i>
-                </a>
-              </li>
-              <li class="mypage-go-list">
-                <a href="/jp/mypage/notification/">一覧を見る</a>
-              </li>
-            </ul>
-
-            <ul id="mypage-tab-todo" class="mypage-item-list tab-pane">
-              <li class="mypage-item-not-found bold">現在、やることリストはありません</li>
-            </ul>
-          </div>
-        </section>
-
-
-  <!--       <aside class="modal" data-modal="banner" data-close="modal">
-          <div class="modal-inner modal-banner">
-            <div class="modal-banner-eye-catch">
-              <img src="//www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?2412540985" alt="">
-              <img src="//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?2412540985" alt="">
-            </div>
-
-            <div class="modal-banner-body">
-              <h2>今すぐ無料ダウンロード！</h2>
-              <p class="bold">全ての機能を使えるスマホアプリはこちら！</p>
-
-              <div class="modal-banner-app clearfix">
-                <a href="https://itunes.apple.com/jp/app/id667861049?l=ja&amp;mt=8" target="_blank" class="pull-left">
-                  <img src="//www-mercari-jp.akamaized.net/assets/img/common/common/app-store.svg?2412540985" alt="">
-                </a>
-                <a href="https://play.google.com/store/apps/details?id=com.kouzoh.mercari&amp;hl=ja" target="_blank" class="pull-left">
-                  <img src="//www-mercari-jp.akamaized.net/assets/img/common/common/google-play.svg?2412540985" alt="">
-                </a>
+        <div class="l-content">
+          <section class="mypage-user-icon">
+            <a href="https://www.mercari.com/jp/u/914898503/">
+              <figure>
+                <img src="//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png" alt="" width="60" height="60">
+              </figure>
+              <h2 class="bold">Mac</h2>
+              <div class="mypage-number">
+                <div class="evaluation">評価 <span class="bold">0</span></div>
+                <div class="exhibit">出品数 <span class="bold">0</span></div>
               </div>
+            </a>
+          </section>
 
-              <a href="" class="modal-banner-app-open" data-toggle="open-app" data-url-scheme="mercari://" data-action="app/launch" data-play-id="com.kouzoh.mercari">
-                アプリで開く
-              </a>
+          <section class="mypage-tab-container-notification-todo">
+
+            <ul class="mypage-tabs">
+              <li class="active">
+                <h3>
+                  <a href="#mypage-tab-notification" data-toggle="tab">
+                    お知らせ
+                  </a>
+                </h3>
+              </li>
+
+              <li class="sub">
+                <h3>
+                  <a href="#mypage-tab-todo" data-toggle="tab">
+                    やることリスト
+                  </a>
+                </h3>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <ul id="mypage-tab-notification" class="mypage-item-list tab-pane active">
+                <li>
+                  <a href="" class="mypage-item-link" data-open="modal" data-modal="banner">
+                    <figure>
+                      <img data-src="//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png" class=" lazyloaded" alt="" src="//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png">
+                    </figure>
+                    <div class="mypage-item-body">
+                      <div class="mypage-item-text">【メルカリ限定】「新しい地図」の地上波初番組「略してブラリク」を配信中！</div>
+                      <time><i class="icon-time"></i><span>3 日前</span></time>
+                    </div>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.mercari.com/jp/mypage/point/" class="mypage-item-link">
+                    <figure>
+                      <img data-src="//static-mercari-jp.akamaized.net/images/mercari_profile.png" class=" lazyloaded" alt="" src="//static-mercari-jp.akamaized.net/images/mercari_profile.png">
+                    </figure>
+                    <div class="mypage-item-body">
+                      <div class="mypage-item-text">有効期限が近づいているポイントがあります</div>
+                      <time><i class="icon-time"></i><span>3 日前</span></time>
+                    </div>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.mercari.com/jp/mypage/news/" class="mypage-item-link">
+                    <figure>
+                      <img data-src="//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png" class=" lazyloaded" alt="" src="//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png">
+                    </figure>
+                    <div class="mypage-item-body">
+                      <div class="mypage-item-text">事務局から個別メッセージ「【P600進呈】まずはポイントを利用して無料でメルカリのお買い物をご体験ください」</div>
+                      <time><i class="icon-time"></i><span>4 日前</span></time>
+                    </div>
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </li>
+                <li class="mypage-go-list">
+                  <a href="/jp/mypage/notification/">一覧を見る</a>
+                </li>
+              </ul>
+
+              <ul id="mypage-tab-todo" class="mypage-item-list tab-pane">
+                <li class="mypage-item-not-found bold">現在、やることリストはありません</li>
+              </ul>
             </div>
-
-            <i class="icon-close" data-close="modal"></i>
-          </div>
-        </aside> -->
+          </section>
 
         <section class="mypage-tab-container">
           <h2 class="mypage-tab-head">購入した商品</h2>
@@ -361,6 +309,7 @@
           </ul>
         </nav>
       </div>
-    as</main>
-  </dev>
-</body>
+    </main>
+  </div>
+  </body>
+</html>
