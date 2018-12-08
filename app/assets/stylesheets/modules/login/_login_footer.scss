@@ -1,0 +1,30 @@
+.login {
+  &__footer{
+    height: 250px;
+    text-align: center;
+    z-index: 1;
+    &__ul{
+      padding: 40px 0;
+    }
+    &__logo{
+      margin: 40px auto 0;
+      text-align: center;
+    }
+    &__li{
+      display: inline-block;
+      margin: 0 0 0 16px;
+      font-size: 12px;
+      list-style: none;
+    }
+    &__li a{
+      text-decoration: none;
+      color: #333;
+    }
+    &__li:hover{
+      text-decoration: underline;
+    }
+    &__copyright{
+      font-size: 10px;
+    }
+  }
+}
