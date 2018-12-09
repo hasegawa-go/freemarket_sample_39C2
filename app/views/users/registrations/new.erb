@@ -1,11 +1,11 @@
-<%= render'layouts/login_header' %>
+<%= render'layouts/registration_header' %>
 <div class="login">
   <div class="registration">
     <div class ="registration__title">会員情報入力
     </div>
     <div class="registration__contents">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <!-- <#%= devise_error_messages! %> -->
+        <%= devise_error_messages! %>
 
 
         <%= f.label "ニックネーム", class: "registration__contents__required" %>

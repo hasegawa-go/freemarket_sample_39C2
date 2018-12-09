@@ -1,12 +1,14 @@
 class UsersController < ApplicationController
 
+before_action :signup_index
+
   def mypage
   end
 
-  def logout
+  def log_out
   end
 
-  def  logintop
+  def  signup_index
   end
 
 
