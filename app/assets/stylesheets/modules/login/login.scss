@@ -2,31 +2,31 @@
   &__main{
     max-width: 456px;
     margin: 0 auto;
-    background: #fff;
+    background: $white;
     box-sizing:inherit;
     display: block;
     overflow: scroll;
     &__top{
-      border-bottom: 1px solid #f5f5f5;
+      border-bottom: 1px solid $gray;
       padding: 40px 64px;
     }
     &__sns{
       margin:32px 64px;
-      border-top: 1px solid #f5f5f5;
+      border-top: 1px solid $gray;
     }
   }
   &__with-account{
     padding: 34px 0 32px;
   }
   .error-text {
-    color: #ea352d;
+    color: $red;
     text-align: left;
   }
   .forget-password{
     text-decoration:none;
     display: block;
     margin-top: 40px;
-    color: #0099e8;
+    color: $light-blue;
     font-size: 14px;
   }
   &__field {
@@ -36,7 +36,7 @@
     border-radius: 4px;
     background-color: rgb(250, 255, 189);
     border: 1px solid #ccc;
-    background: #fff;
+    background: $white;
     line-height: 1.5;
     font-size: 16px;
     margin: 12px auto;

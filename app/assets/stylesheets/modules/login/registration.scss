@@ -2,7 +2,7 @@
   .registration{
     max-width: 700px;
     margin: 0 auto;
-    background: #fff;
+    background: $white;
     box-sizing:inherit;
     display: block;
     overflow: scroll;
@@ -12,7 +12,7 @@
       text-align: center;
       line-height: 1.5;
       font-weight: bold;
-      border-bottom: 1px solid #f5f5f5;
+      border-bottom: 1px solid $gray;
     }
     &__contents{
       padding: 20px;
@@ -27,11 +27,11 @@
       }
 
       &__required::after {
-        background-color: #ea352d;
+        background-color: $red;
         content: "必須";
         font-size: 8px;
         font-weight:100;
-        color: #fff;
+        color: $white;
         border-radius:2px;
         display: inline-block;
         margin-left: 8px;

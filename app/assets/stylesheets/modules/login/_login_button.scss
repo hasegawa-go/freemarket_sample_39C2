@@ -9,33 +9,33 @@
     padding: 14px 0;
     width: 100%;
     &__fb {
-      color: #fff;
+      color: $white;
       background: #385185;
     }
     &__google {
-      color: #fff;
+      color: $white;
       background: #dc4e41;
     }
     &__no-account {
-      color: #fff;
-      background-color:#0099e8;
+      color: $white;
+      background-color: $light-blue;
     }
     &__mail{
       color: #333;
       background-color:#eee;
     }
     &__submit{
-      color: #fff;
-      background: #ea352d;
+      color: $white;
+      background: $red;
       &__next{
-        color: #fff;
-        background: #ea352d;
+        color: $white;
+        background: $red;
         margin: 40px 0;
       }
     }
   }
   i.fa{
-  color: #fff;
+  color: $white;
   font-size: 20px;
   }
   .fa-envelope{
