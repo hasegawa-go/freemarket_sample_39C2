@@ -4,10 +4,16 @@ Rails.application.routes.draw do
   root 'items#index'
 
   devise_for :users, controllers: {
-    omniauth_callbacks: "users/omniauth_callbacks"
-}
-# get "pages/user_info", as: "user_root"
+    omniauth_callbacks: "users/omniauth_callbacks",
+    registrations: 'users/registrations'
+  }
+
+  devise_scope :user do
+    get 'users/sign_up/step_0', to: 'users/registrations#index'
+  end
 
   get  'mypage', to: 'users#mypage', as: :user_mypage
+  get  'log_out', to: 'users#log_out', as: :user_log_out
+  
 
 end
