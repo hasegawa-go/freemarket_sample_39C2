@@ -17,8 +17,8 @@
       <% end %>
       <div class="login__main__with-account">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス"%>
-          <%= f.password_field :password, autocomplete: "current-password",placeholder: "パスワード" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "login__field" %>
+          <%= f.password_field :password, autocomplete: "current-password",placeholder: "パスワード", class: "login__field" %>
           <div class="g-recaptcha login-captcha" data-sitekey="6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc">
             <div style="width: 304px; height: 78px;">
               <div>
