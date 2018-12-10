@@ -1,16 +1,16 @@
 <%= render'layouts/login_header' %>
-<div class= "login">
-  <div class= "signup">
-    <h2 class= "signup__title">新規会員登録</h2>
-    <div class= "signup__contents">
+<div class ="login">
+  <div class="signup">
+    <h2 class="signup__title">新規会員登録</h2>
+    <div class="signup__contents">
       <%= link_to "メールアドレスで登録", new_user_registration_path, class: "login__button login__button__mail" %>
-        <%= fa_icon 'envelope'%>
+        <%=fa_icon 'envelope'%>
 
       <%= link_to "Facebookでログイン",user_facebook_omniauth_authorize_path, class: "login__button login__button__fb" %>
-        <%= fa_icon 'facebook-square' %>
+        <%=fa_icon 'facebook-square' %>
 
       <%= link_to "Googleでログイン",user_google_oauth2_omniauth_authorize_path, class: "login__button login__button__google" %>
-        <%= fa_icon 'google-plus-square' %>
+        <%=fa_icon 'google-plus-square' %>
 
     </div>
   </div>
