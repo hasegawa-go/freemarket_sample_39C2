@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-before_action :signup_index
+before_action :authenticate_user!
 
   def mypage
   end
@@ -8,8 +8,7 @@ before_action :signup_index
   def log_out
   end
 
-  def  signup_index
-  end
+  
 
 
 

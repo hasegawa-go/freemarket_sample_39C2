@@ -5,16 +5,19 @@
     <div class= "signup__contents">
 
 
-      <%= link_to "メールアドレスで登録", new_user_registration_path, class: "login__button login__button__mail" %>
-        <%= fa_icon 'envelope'%>
+      <%= link_to new_user_registration_path, class: "login__button login__button__mail" do %>
+        <%= fa_icon 'envelope'%> メールアドレスで登録
+      <% end %>
 
 
-      <%= link_to "Facebookでログイン",user_facebook_omniauth_authorize_path, class: "login__button login__button__fb" %>
-        <%= fa_icon 'facebook-square' %>
+      <%= link_to user_facebook_omniauth_authorize_path, class: "login__button login__button__fb" do%>
+        <%= fa_icon 'facebook-square' %> Facebookでログイン
+      <% end %>
 
 
-      <%= link_to "Googleでログイン",user_google_oauth2_omniauth_authorize_path, class: "login__button login__button__google" %>
-        <%= fa_icon 'google-plus-square' %>
+      <%= link_to user_google_oauth2_omniauth_authorize_path, class: "login__button login__button__google" do %>
+        <%= fa_icon 'google-plus-square' %>Googleでログイン
+      <% end %>
 
 
     </div>

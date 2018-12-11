@@ -3,7 +3,7 @@
     text-decoration:none;
     display: block;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     text-align: center;
     cursor: pointer;
     padding: 14px 0;
@@ -27,11 +27,11 @@
     &__submit{
       color: $white;
       background: $red;
-      &__next{
-        color: $white;
-        background: $red;
-        margin: 40px 0;
-      }
+    }
+    &__next{
+      color: $white;
+      background: $red;
+      margin: 40px 0;
     }
     &__logout{
       max-width: 320px;

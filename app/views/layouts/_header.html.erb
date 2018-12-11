@@ -29,18 +29,14 @@
         <div class="content-right">
           <ul class="header-user-list">
             <li>
-              <a href=" " class="header-user-root">
-                <div class="sign-in-btn">
-                  ログイン
-                </div>
-              </a>
+              <div class="header-user-root">
+                <%= link_to "ログイン", new_user_session_path , class: "header-user-root sign-in-btn" %>
+              </div>
             </li>
             <li>
-              <a href=" " class="register-btn">
-                <div class="sign-up-btn">
-                  新規会員登録
-                </div>
-              </a>
+              <div class="register-btn">
+                <%= link_to "新規会員登録", users_sign_up_step_0_path, class: "register-btn sign-up-btn" %>
+              </div>
             </li>
           </ul>
         </div>
