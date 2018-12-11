@@ -1,0 +1,37 @@
+<%= render'layouts/login_header' %>
+<div class="login">
+	<div class="item">
+  		<h2 class="item__title">商品の情報を入力
+  		</h2>
+  		<div class="item__image">
+  			<%= form_for @item, multipart: true do |f|%>
+
+  				<%= f.label "出品画像 最大４枚までアップロードできます" %>
+      			<%= f.text_field  :image, type:"text" %>
+
+      			<%= f.label "商品名" %>
+      			<%= f.text_erea name:"text", placeholder: "商品名（必須 40文字まで)", rows:"10" %>
+
+      			<%= f.label "商品の説明" %>
+      			<%= f.text_erea rows: "5", placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" %>
+
+      			<%= f.submit "もどる", class:"login__button login__button__next" %>
+
+  			<% end %>
+
+  		</div>
+  		<div class="item__detile">
+  		</div>
+  		<div class="item__shipping">
+  		</div>
+  		<div class="item__price">
+  		</div>
+  		<div class="item_warnig">
+  			<p>禁止されている出品、行為を必ずご確認ください。
+またブランド品でシリアルナンバー等がある場合はご記載ください。偽ブランドの販売は犯罪であり処罰される可能性があります。
+また、出品をもちまして加盟店規約に同意したことになります。
+  			</p>
+	</div>
+  	</div>
+  </div>
+<%= render'layouts/login_footer' %>
