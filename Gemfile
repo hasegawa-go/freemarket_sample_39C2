@@ -56,9 +56,6 @@ group :production do
   gem 'unicorn'
 end
 
-group :development, :test do
-
-end
 
 gem 'devise'
 gem 'omniauth'
@@ -66,3 +63,11 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 
 gem "font-awesome-rails"
+
+group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
+end
