@@ -8,7 +8,8 @@ before_action :authenticate_user!
   def log_out
   end
 
-  
+  def profile
+  end
 
 
 
