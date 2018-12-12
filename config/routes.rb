@@ -14,6 +14,6 @@ Rails.application.routes.draw do
 
   get  'mypage', to: 'users#mypage', as: :user_mypage
   get  'log_out', to: 'users#log_out', as: :user_log_out
-  
+  get  'profile', to: 'users#profile', as: :user_profile
 
 end

@@ -1,0 +1,41 @@
+@import "./variable";
+
+.mypage__main__left{
+  float: left;
+  width: 280px;
+  margin: 0 40px 0 0;
+}
+
+.mypage__main__left__nav__list__item{
+  color: black;
+  text-align: left;
+  font-family: sans-serif;
+  min-height: 48px;
+  margin: 0;
+  line-height: 48px;
+  padding-left: 20px;
+}
+
+.mypage__main__left__nav__list{
+  margin-top: 8px;
+  & li{
+    transition: 0.3s;
+    background-color: white;
+    list-style: none;
+    border: 1px solid $gray;
+    width: 280px;
+    height: 48px;
+    & a {
+      text-decoration: none;
+    }
+  }
+}
+
+.mypage__main__left__nav__list li:hover{
+  background-color: #eeeeee;
+}
+
+.mypage__main__left__nav__head{
+  margin-top: 40px;
+  margin-left: 40px;
+}
