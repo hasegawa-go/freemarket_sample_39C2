@@ -1,10 +1,6 @@
 @import "./reset";
 @import "font-awesome";
 @import "config/variable";
-@import "modules/header";
-@import "modules/footer";
-@import "modules/index";
+@import 'modules/*';
+@import "modules/mypage/*";
 @import "modules/login/*";
-@import "./mypage";
-@import "modules/item";
-

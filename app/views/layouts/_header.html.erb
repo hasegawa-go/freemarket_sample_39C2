@@ -29,6 +29,9 @@
         <div class="content-right">
           <ul class="header-user-list">
             <li>
+              <%= link_to "マイページ",  user_mypage_path %>
+            </li>
+            <li>
               <div class="header-user-root">
                 <%= link_to "ログイン", new_user_session_path , class: "header-user-root sign-in-btn" %>
               </div>
