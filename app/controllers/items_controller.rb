@@ -9,7 +9,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-	 	# Item.create(image: item_params[:image], text: tweet_params[:text],user_id: current_user.id)
   end
 
   def show
