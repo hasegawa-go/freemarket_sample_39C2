@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
 
-set :application, "freemarket_sample_39c2"
+set :application, "freemarket_sample_39C2"
 set :repo_url, "git@github.com:hasegawa-go/freemarket_sample_39C2.git"
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
