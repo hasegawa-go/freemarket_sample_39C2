@@ -1,25 +1,147 @@
 .item{
 	max-width: 700px;
-    margin: 0 auto;
-    background: $white;
-    box-sizing:inherit;
-    display: block;
-    overflow: scroll;
-    &__title{
-      font-size: 18px;
-      padding: 24px 8px;
-      text-align: center;
-      line-height: 1.5;
-      font-weight: bold;
-      border-bottom: 1px solid $gray;
+  margin: 0 auto;
+  background: $white;
+  box-sizing:inherit;
+  display: block;
+  overflow: scroll;
+  &__title{
+    font-size: 18px;
+    padding: 24px 8px;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: bold;
+    border-bottom: 20px;
+    border-bottom: 1px solid $gray;
+  }
+  &__photoupload{
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $gray;
+    &__subtitle{
+      margin: 6px 0 12px 40px;
+      font-size: 12px;
     }
     &__image{
-    	font-size: 14px;
-      padding: 24px 8px;
-      text-align: left;
-      line-height: 1.5;
+      height: 102px;
+      width: 580px;
+      padding: 20px;
+      margin: 0 auto;
+      background: #f5f5f5;
+      border: 1px dashed #ccc;
+    }
+  }
+  &__upload{
+    padding-bottom: 40px;
+    // margin-bottom: 40px;
+    border-bottom: 1px solid $gray;
+    &__name{
+      font-size: 14px;
       font-weight: bold;
-      border-bottom: 1px solid $gray;
+      margin: 40px 0 12px 40px;
+      display: block;
     }
+    &__name::after {
+      background-color: $red;
+      content: "必須";
+      font-size: 8px;
+      font-weight:100;
+      color: $white;
+      border-radius:2px;
+      display: inline-block;
+      margin-left: 8px;
+      position:relative;
+      padding: 3px 6px;
+      top: -2px;
     }
+    &__field{
+      width: 620px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+      margin-left: 40px;
+    }
+  }
+  &__sub{
+    // padding-bottom: 40px;
+    // float: right;
+    // width: 400px;
+    // height: 300px;
+    // margin: 40px;
+    clear: both;
+    border-bottom: 1px solid $gray;
+    &__wrapper{
+      // height: 200px;
+      float: right;
+      width: 400px;
+      margin: 40px 40px 40px 0;
+      &__name{
+        font-size: 14px;
+        font-weight: bold;
+        position: relative;
+        top: 20;
+      }
+      &__name::after {
+        background-color: $red;
+        content: "必須";
+        font-size: 8px;
+        font-weight:100;
+        color: $white;
+        border-radius:2px;
+        display: inline-block;
+        margin-left: 8px;
+        position:relative;
+        padding: 3px 6px;
+        top: -2px;
+      }
+      &__field{
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+      &__price{
+        width: 160px;
+        float: right;
+        margin-bottom: 40px;
+        text-align: right;
+        height: 48px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 3;
+        font-size: 16px;
+      }
+    }
+  }
+  &__warning{
+    clear: both;
+    margin: 40px;
+    font-size: 12px;
+    margin: 40px auto;
+  }
 }
+h3{
+  font-size: 14px;
+  font-weight: bold;
+  margin: 40px 0 0 40px;
+  &::after {
+    background-color: $red;
+    content: "必須";
+    font-size: 8px;
+    font-weight:100;
+    color: $white;
+    border-radius:2px;
+    display: inline-block;
+    margin-left: 8px;
+    position:relative;
+    padding: 3px 6px;
+    top: -2px;
+  }
+}
+
