@@ -1,0 +1,58 @@
+.mypage
+  %main.mypage__main
+    .mypage__main__right
+      %section.mypage__main__right__top__profile
+        %a{:href => "https://www.mercari.com/jp/u/914898503/"}
+          %figure
+            %img{:alt => "", :height => "60", :src => "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", :width => "60"}/
+          %h2.mypage__main__right__top__profile--bold Mac
+          .mypage__main__ritht__top__profile__number
+            .mypage__main__right__top__profile__evaluation
+              評価
+              %span.mypage__main__right__top__profile--bold 0
+            .mypage__main__right__top__profile__exhibit
+              出品数
+              %span.mypage__main__right__top__profile--bold 0
+      %section.mypage__main__right__middle
+        %ul.mypage__main__right__middle__tabs
+          %li.mypage__main__right__middle__tabs--active
+            %h3
+              %a{:href => ""}
+                お知らせ
+          %li
+            %h3
+              %a{:href => ""}
+                やることリスト
+        .mypage__main__right__middle__content
+          %ul#mypage-tab-notification.mypage__main__right__middle__content__item-list.tab-pane.active
+            %li
+              %a.mypage__main__right__middle__content__item-list__link{"data-modal" => "banner", "data-open" => "modal", :href => ""}
+                %figure
+                  %img.lazyloaded{:alt => "", "data-src" => "//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", :src => "//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png"}/
+                .mypage__main__right__middle__contet__item-list__body
+                  .mypage__main__right__middle__contet__item-list__body__text 【メルカリ限定】「新しい地図」の地上波初番組「略してブラリク」を配信中！
+                  %time
+                    %i.icon-time
+                    %span 3 日前
+                %i.icon-arrow-right
+            %li.mypage__main__right__middle__content__item-list__show
+              %a{:href => "/jp/mypage/notification/"} 一覧を見る
+          %ul#mypage-tab-todo
+            %li.mypage__main__right__middle__content__item-list--not-found.bold 現在、やることリストはありません
+      %section.mypage__main__right__bottom
+        %h2.mypage__main__right__bottom__tab-head 購入した商品
+        %ul.mypage__main__right__bottom__tabs
+          %li.mypage__main__right__bottom__tabs--active
+            %h3
+              %a{"data-toggle" => "tab", :href => "#mypage-tab-transaction-now"}
+                取引中
+          %li
+            %h3
+              %a{"data-toggle" => "tab", :href => "#mypage-tab-transaction-old"}
+                過去の取引
+        .mypage__main__right__bottom__content
+          %ul#mypage-tab-transaction-now.mypage__main__right__bottom__content__item-list.tab-pane.active
+            %li.mypage__main__right__bottom__content__item-list--not-found.bold 取引中の商品がありません
+          %ul#mypage-tab-transaction-old
+            %li.mypage__main__right__bottom__content__item-list--not-found.bold 過去に取引した商品がありません
+    = render partial:'sidebar'
