@@ -1,0 +1,15 @@
+= render'layouts/login_header'
+.login
+  .signup
+    %h2.signup__title 新規会員登録
+    .signup__contents
+      = link_to new_user_registration_path, class: "login__button login__button__mail" do
+        = fa_icon 'envelope'
+        メールアドレスで登録
+      = link_to user_facebook_omniauth_authorize_path, class: "login__button login__button__fb" do
+        = fa_icon 'facebook-square'
+        Facebookでログイン
+      = link_to user_google_oauth2_omniauth_authorize_path, class: "login__button login__button__google" do
+        = fa_icon 'google-plus-square'
+        Googleでログイン
+= render'layouts/login_footer'

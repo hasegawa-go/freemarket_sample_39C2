@@ -1,0 +1,17 @@
+.profile
+  %main.profile__main
+    .profile__main__right
+      %section.profile__main__right__section
+        %h2.profile__main__right__section__head プロフィール
+        %form{:action => "https://www.mercari.com/jp/mypage/profile/", :method => "POST"}
+          %input{:name => "__csrf_value", :type => "hidden", :value => "9ead02572c26f3cdb3e4073ebaf338710b09bb020559b2730908c7b6c161c1834d55203df8251159a9a83fd37142545cd4938fe9b15a38fb56be8d82841cd12de"}/
+          .profile__main__right__section__namevar
+            %figure
+              %img{:height => "60", :src => "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", :width => "60"}/
+            = succeed "@user.nickname" do
+              %input{:type => "text", :value => @user.nickname}/
+          .profile__main__right__section__textbox
+            %textarea.textbox{:name => "introduction", :placeholder => "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+            %input{:name => "after_save_callback", :type => "hidden", :value => "https://www.mercari.com/jp/mypage/profile/"}/
+            %button.bottom-btn{:type => "submit"} 変更する
+    = render partial:'sidebar'
