@@ -1,0 +1,30 @@
+= render 'layouts/login_header'
+.login
+  .login__main
+    .login__main__top
+      %p アカウントをお持ちでない方はこちら
+      - if devise_mapping.registerable? && controller_name != 'registrations'
+        = link_to "新規会員登録", users_sign_up_step_0_path, class: "login__button login__button__no-account"
+    .login__main__sns
+      = link_to user_facebook_omniauth_authorize_path, class: "login__button login__button__fb" do
+        = fa_icon 'facebook-square'
+        Facebookでログイン
+      = link_to user_google_oauth2_omniauth_authorize_path, class: "login__button login__button__google" do
+        = fa_icon 'google-plus-square'
+        Googleでログイン
+      .login__main__with-account
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "login__field"
+          = f.password_field :password, autocomplete: "current-password",placeholder: "パスワード", class: "login__field"
+          .g-recaptcha.login-captcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
+            %div{:style => "width: 304px; height: 78px;"}
+              %div
+                %iframe{:frameborder => "0", :height => "78", :name => "a-w0x9bnq0oemn", :role => "presentation", :sandbox => "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", :scrolling => "no", :src => "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1542004393985&size=normal&cb=rpt8q8e1vxj2", :width => "304"}
+              %textarea#g-recaptcha-response.g-recaptcha-response{:name => "g-recaptcha-response", :style => "width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"}
+                :preserve
+              %p.error-text 選択してください
+          = f.submit "ログイン" , class:"login__button login__button__submit "
+        - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+          = link_to "パスワードをお忘れの方", new_password_path(resource_name), class:"forget-password"
+          %br/
+= render 'layouts/login_footer'
