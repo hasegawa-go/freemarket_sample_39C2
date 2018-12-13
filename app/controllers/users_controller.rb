@@ -9,6 +9,7 @@ before_action :authenticate_user!
   end
 
   def profile
+    @user = User.find(current_user)
   end
 
 
