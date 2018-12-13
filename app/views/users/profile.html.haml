@@ -9,7 +9,7 @@
             %figure
               %img{:height => "60", :src => "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", :width => "60"}/
             = succeed "@user.nickname" do
-              %input{:type => "text", :value => "<haml_loud"}/
+              %input{:type => "text", :value => @user.nickname}/
           .profile__main__right__section__textbox
             %textarea.textbox{:name => "introduction", :placeholder => "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
             %input{:name => "after_save_callback", :type => "hidden", :value => "https://www.mercari.com/jp/mypage/profile/"}/
