@@ -1,3 +1,52 @@
+.form-group {
+  flex-direction: column;
+  display: flex;
+  margin: 0 40px;
+  margin-bottom: 40px;
+
+  &__horizontal {
+    align-items: center;
+    flex-direction: row;
+
+    .form-group__label {
+      align-self: center;
+      flex-grow: 1;
+    }
+
+    .form-group__input-field {
+      flex-grow: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  &__label::after {
+    background-color: $red;
+    content: "必須";
+    font-size: 8px;
+    font-weight:100;
+    color: $white;
+    border-radius:2px;
+    display: inline-block;
+    margin-left: 8px;
+    position:relative;
+    padding: 3px 6px;
+    top: -2px;
+  }
+
+  &__input-field {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    padding: 8px 16px;
+    resize: none;
+  }
+}
+
+
 .item{
 	max-width: 700px;
   margin: 0 auto;
@@ -32,8 +81,6 @@
     }
   }
   &__upload{
-    padding-bottom: 40px;
-    // margin-bottom: 40px;
     border-bottom: 1px solid $gray;
     &__name{
       font-size: 14px;
@@ -70,13 +117,19 @@
     // width: 400px;
     // height: 300px;
     // margin: 40px;
-    clear: both;
+    display: flex;
     border-bottom: 1px solid $gray;
+    padding-top: 40px;
+    padding-left: 40px;
+
+    &__description {
+      color: #888;
+      flex-grow: 1;
+      font-size: 14px;
+      font-weight: bold;
+    }
     &__wrapper{
-      // height: 200px;
-      float: right;
-      width: 400px;
-      margin: 40px 40px 40px 0;
+      width: 480px;
       &__name{
         font-size: 14px;
         font-weight: bold;
@@ -117,13 +170,49 @@
         line-height: 3;
         font-size: 16px;
       }
+      &__price-fields {
+        font-size: 14px;
+        margin: 0 40px;
+
+        &__commission,
+        &__profit {
+          border-top: 1px solid $gray;
+          display: flex;
+          padding: 24px 0;
+        }
+
+        &__commission__description,
+        &__commission__amount,
+        &__profit__description,
+        &__profit__amount {
+          flex-grow: 1;
+        }
+
+        &__commission__amount,
+        &__profit__amount {
+          text-align: right;
+        }
+
+        &__commission {
+        }
+
+        &__profit {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
     }
   }
   &__warning{
-    clear: both;
     margin: 40px;
-    font-size: 12px;
-    margin: 40px auto;
+    font-size: 14px;
+  }
+  &__button-wrapper {
+    margin: 0 40px;
+  }
+  &__back-button-wrapper {
+    margin: 0 auto;
+    width: 200px;
   }
 }
 h3{

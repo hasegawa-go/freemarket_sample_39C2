@@ -24,6 +24,10 @@
       color: #333;
       background-color:#eee;
     }
+    &__gray {
+      background-color: rgb(170, 170, 170);
+      color: $white;
+    }
     &__submit{
       color: $white;
       background: $red;
