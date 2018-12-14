@@ -9,6 +9,12 @@ class ItemsController < ApplicationController
   end
 
   def create
+    @item = Item.new(item_params)
+      if @item.save
+        redirect_to root_path
+      else
+        redirect_to new_item_path
+      end
   end
 
   def show
@@ -17,7 +23,7 @@ class ItemsController < ApplicationController
 
 private
     def item_params
-      params.permit(:image,:text,)
+      params.require(:item).permit(:name, :description, :condition, :price ).merge(seller_id: current_user.id)
     end
 
     def move_to_index
