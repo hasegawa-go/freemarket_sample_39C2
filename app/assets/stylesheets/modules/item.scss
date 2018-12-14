@@ -1,0 +1,236 @@
+.form-group {
+  flex-direction: column;
+  display: flex;
+  margin: 0 40px;
+  margin-bottom: 40px;
+
+  &__horizontal {
+    align-items: center;
+    flex-direction: row;
+
+    .form-group__label {
+      align-self: center;
+      flex-grow: 1;
+    }
+
+    .form-group__input-field {
+      flex-grow: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  &__label::after {
+    background-color: $red;
+    content: "必須";
+    font-size: 8px;
+    font-weight:100;
+    color: $white;
+    border-radius:2px;
+    display: inline-block;
+    margin-left: 8px;
+    position:relative;
+    padding: 3px 6px;
+    top: -2px;
+  }
+
+  &__input-field {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: 8px;
+    padding: 8px 16px;
+    resize: none;
+  }
+}
+
+
+.item{
+	max-width: 700px;
+  margin: 0 auto;
+  background: $white;
+  box-sizing:inherit;
+  display: block;
+  overflow: scroll;
+  &__title{
+    font-size: 18px;
+    padding: 24px 8px;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: bold;
+    border-bottom: 20px;
+    border-bottom: 1px solid $gray;
+  }
+  &__photoupload{
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $gray;
+    &__subtitle{
+      margin: 6px 0 12px 40px;
+      font-size: 12px;
+    }
+    &__image{
+      height: 102px;
+      width: 580px;
+      padding: 20px;
+      margin: 0 auto;
+      background: #f5f5f5;
+      border: 1px dashed #ccc;
+    }
+  }
+  &__upload{
+    border-bottom: 1px solid $gray;
+    &__name{
+      font-size: 14px;
+      font-weight: bold;
+      margin: 40px 0 12px 40px;
+      display: block;
+    }
+    &__name::after {
+      background-color: $red;
+      content: "必須";
+      font-size: 8px;
+      font-weight:100;
+      color: $white;
+      border-radius:2px;
+      display: inline-block;
+      margin-left: 8px;
+      position:relative;
+      padding: 3px 6px;
+      top: -2px;
+    }
+    &__field{
+      width: 620px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 16px;
+      margin-left: 40px;
+    }
+  }
+  &__sub{
+    // padding-bottom: 40px;
+    // float: right;
+    // width: 400px;
+    // height: 300px;
+    // margin: 40px;
+    display: flex;
+    border-bottom: 1px solid $gray;
+    padding-top: 40px;
+    padding-left: 40px;
+
+    &__description {
+      color: #888;
+      flex-grow: 1;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    &__wrapper{
+      width: 480px;
+      &__name{
+        font-size: 14px;
+        font-weight: bold;
+        position: relative;
+        top: 20;
+      }
+      &__name::after {
+        background-color: $red;
+        content: "必須";
+        font-size: 8px;
+        font-weight:100;
+        color: $white;
+        border-radius:2px;
+        display: inline-block;
+        margin-left: 8px;
+        position:relative;
+        padding: 3px 6px;
+        top: -2px;
+      }
+      &__field{
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 1.5;
+        font-size: 16px;
+      }
+      &__price{
+        width: 160px;
+        float: right;
+        margin-bottom: 40px;
+        text-align: right;
+        height: 48px;
+        padding: 10px 16px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background: #fff;
+        line-height: 3;
+        font-size: 16px;
+      }
+      &__price-fields {
+        font-size: 14px;
+        margin: 0 40px;
+
+        &__commission,
+        &__profit {
+          border-top: 1px solid $gray;
+          display: flex;
+          padding: 24px 0;
+        }
+
+        &__commission__description,
+        &__commission__amount,
+        &__profit__description,
+        &__profit__amount {
+          flex-grow: 1;
+        }
+
+        &__commission__amount,
+        &__profit__amount {
+          text-align: right;
+        }
+
+        &__commission {
+        }
+
+        &__profit {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__warning{
+    margin: 40px;
+    font-size: 14px;
+  }
+  &__button-wrapper {
+    margin: 0 40px;
+  }
+  &__back-button-wrapper {
+    margin: 0 auto;
+    width: 200px;
+  }
+}
+h3{
+  font-size: 14px;
+  font-weight: bold;
+  margin: 40px 0 0 40px;
+  &::after {
+    background-color: $red;
+    content: "必須";
+    font-size: 8px;
+    font-weight:100;
+    color: $white;
+    border-radius:2px;
+    display: inline-block;
+    margin-left: 8px;
+    position:relative;
+    padding: 3px 6px;
+    top: -2px;
+  }
+}
+

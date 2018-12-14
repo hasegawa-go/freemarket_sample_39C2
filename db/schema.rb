@@ -12,6 +12,20 @@
 
 ActiveRecord::Schema.define(version: 20181214074548) do
 
+  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",                      null: false
+    t.integer  "price"
+    t.text     "description", limit: 65535
+    t.string   "condition"
+    t.string   "status"
+    t.integer  "seller_id"
+    t.integer  "buyer_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["buyer_id"], name: "index_items_on_buyer_id", using: :btree
+    t.index ["seller_id"], name: "index_items_on_seller_id", using: :btree
+  end
+
   create_table "user_infos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
@@ -37,5 +51,7 @@ ActiveRecord::Schema.define(version: 20181214074548) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "items", "users", column: "buyer_id"
+  add_foreign_key "items", "users", column: "seller_id"
   add_foreign_key "user_infos", "users"
 end
