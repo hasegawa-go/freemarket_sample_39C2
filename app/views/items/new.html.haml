@@ -24,23 +24,23 @@
         .item__sub__wrapper
           .form-group
             = f.label "カテゴリー", class: "form-group__label"
-            / = f.text_field :category, placeholder: "---", class: "form-group__input-field"
+            = f.text_field :name, placeholder: "---", class: "form-group__input-field"
           .form-group
             = f.label "商品の状態", class: "form-group__label"
-            = f.text_field :condition, placeholder: "---", class: "form-group__input-field"
+            = f.text_field :name, placeholder: "---", class: "form-group__input-field"
       .item__sub
         .item__sub__description
           発送について？
         .item__sub__wrapper
           .form-group
             = f.label "配送料の負担", class: "form-group__label"
-            / = f.text_field :shipping_fee, placeholder: "---", class: "form-group__input-field"
+            = f.text_field :name, placeholder: "---", class: "form-group__input-field"
           .form-group
             = f.label "発送元の地域", class: "form-group__label"
-            / = f.text_field :shipping_region, placeholder: "---", class: "form-group__input-field"
+            = f.text_field :name, placeholder: "---", class: "form-group__input-field"
           .form-group
             = f.label "発送までの日数", class: "form-group__label"
-            / = f.text_field :shipping_schedule, placeholder: "---", class: "form-group__input-field"
+            = f.text_field :name, placeholder: "---", class: "form-group__input-field"
       .item__sub
         .item__sub__description
           販売価格(300〜9,999,999)
@@ -49,7 +49,7 @@
             = f.label "価格", class: "form-group__label"
             %span.item__sub__wrapper__currency
               ¥
-            = f.text_field :price, placeholder: "例）300", class: "form-group__input-field"
+            = f.text_field :name, placeholder: "例）300", class: "form-group__input-field"
           .item__sub__wrapper__price-fields
             .item__sub__wrapper__price-fields__commission
               .item__sub__wrapper__price-fields__commission__description
