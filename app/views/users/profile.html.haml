@@ -1,3 +1,4 @@
+= render partial: "/layouts/header"
 .profile
   %main.profile__main
     .profile__main__right
@@ -15,3 +16,4 @@
             %input{name: "after_save_callback", type: "hidden", value: "https://www.mercari.com/jp/mypage/profile/"}/
             %button.bottom-btn{type: "submit"} 変更する
     = render partial:'sidebar'
+= render partial: "/layouts/footer"
