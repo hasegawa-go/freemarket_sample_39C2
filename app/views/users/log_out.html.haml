@@ -2,66 +2,8 @@
 .login
   .logout
     .logout__contents
-      .logout__contents__top
+      .logout__contents__right
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "login__button login__button__logout"
-      .logout__contents__bottom
-        / ＊＊ーー下部は仮置きーーマイページの部分テンプレート完成したらここの下に入れるーー＊＊
-        .mypage
-          %ul.mypage-nav-list
-            %li
-              - link_to "#"
-              マイページ
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              お知らせ
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              やることリスト
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              いいね！一覧
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              出品する
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              出品した商品 - 出品中
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              出品した商品 - 取引中
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              出品した商品 - 売却済み
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              購入した商品 - 取引中
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              購入した商品 - 過去の取引
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              ニュース一覧
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              評価一覧
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              ガイド
-              %i.icon-arrow-right
-            %li
-              - link_to "#"
-              お問い合わせ
-              %i.icon-arrow-right
+      .logout__contents__left
+        = render partial: "sidebar"
 = render partial: "/layouts/footer"
