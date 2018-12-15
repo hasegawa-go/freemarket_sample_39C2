@@ -4,13 +4,14 @@
 .mypage{
   background-color: #eee;
   &__main{
-    padding: 40px 0 150px 0;
-    margin: 40px auto;
+    padding: 40px 0 170px 0;
+    margin: 40px auto 0px;
     width: 1020px;
     height: 1200px;
     &__right{
       width: 700px;
       float: right;
+      margin-top: 34px;
       &__top__profile{
         height: 200px;
         padding: 20px;
@@ -24,6 +25,13 @@
       }
     }
   }
+}
+
+.mypage__main__right__top__profile h2{
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  color: black;
 }
 
 .mypage__main__right__top__profile img{
