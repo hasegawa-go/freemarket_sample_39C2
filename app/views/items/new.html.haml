@@ -5,7 +5,8 @@
       商品の情報を入力
     = form_for @item, multipart: true do |f|
       .item__photoupload
-        %h3 出品画像
+        .item__photoupload__label
+          出品画像
         .item__photoupload__subtitle
           最大４枚までアップロードできます
         .item__photoupload__image
