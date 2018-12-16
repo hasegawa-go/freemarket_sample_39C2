@@ -26,6 +26,7 @@
         .item__sub__wrapper
           .form-group
             = select_tag "category", options_for_select(["選択して下さい", "---", "item"])
+            / ＊＊--テーブル完成後にコメントアウトを外すーーー＊＊
             / = f.label "カテゴリー", class: "form-group__label"
             / = f.text_field :name, placeholder: "---", class: "form-group__input-field"
           .form-group
@@ -37,14 +38,17 @@
         .item__sub__wrapper
           .form-group
             = select_tag "shipping", options_for_select(["選択して下さい", "---", "free"])
+            / ＊＊--テーブル完成後にコメントアウトを外すーーー＊＊
             / = f.label "配送料の負担", class: "form-group__label"
             / = f.text_field :name, placeholder: "---", class: "form-group__input-field"
           .form-group
             = select_tag "prefecture", options_for_select(["選択して下さい", "---", "東京"])
+            / ＊＊--テーブル完成後にコメントアウトを外すーーー＊＊
             / = f.label "発送元の地域", class: "form-group__label"
             / = f.text_field :name, placeholder: "---", class: "form-group__input-field"
           .form-group
             = select_tag "schedule", options_for_select(["選択して下さい", "---", "１〜３日"])
+            / ＊＊--テーブル完成後にコメントアウトを外すーーー＊＊
             / = f.label "発送までの日数", class: "form-group__label"
             / = f.text_field :name, placeholder: "---", class: "form-group__input-field"
       .item__sub
