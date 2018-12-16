@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
       if @item.save
         redirect_to root_path
       else
-        redirect_to new_item_path
+        redirect_to new_item_path, alert:"商品登録に失敗しました"
       end
   end
 
