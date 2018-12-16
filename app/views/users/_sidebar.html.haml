@@ -3,7 +3,7 @@
     %ul.mypage__main__left__nav__list
       / 以下サイドバーの上段
       %li
-        = link_to "マイページ","#",class:"mypage__main__left__nav__list__item active"
+        = link_to "マイページ",user_mypage_path(@user),class:"mypage__main__left__nav__list__item active"
         %i.icon-arrow-right
       %li
         = link_to "お知らせ","#",class:"mypage__main__left__nav__list__item"
@@ -15,7 +15,7 @@
         = link_to "いいね一覧","#",class:"mypage__main__left__nav__list__item"
         %i.icon-arrow-right
       %li
-        = link_to "出品する","#",class:"mypage__main__left__nav__list__item"
+        = link_to "出品する",new_item_path(@item),class:"mypage__main__left__nav__list__item"
         %i.icon-arrow-right
       %li
         = link_to "出品した商品 - 出品中","#",class:"mypage__main__left__nav__list__item"

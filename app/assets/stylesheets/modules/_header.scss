@@ -87,6 +87,12 @@
     li{
       float: left;
     }
+    a{
+      text-decoration: none;
+      &:visited{
+        color: $black;
+      }
+    }
   .header-user-root{
     text-decoration: none;
     margin: 0;

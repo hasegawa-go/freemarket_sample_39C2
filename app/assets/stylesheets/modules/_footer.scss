@@ -163,7 +163,7 @@ nav {
   display: block;
 }
 
-.footer-sell-btn {
+.footer__sell__btn {
   bottom: 32px;
   right: 32px;
   width: 160px;
@@ -175,17 +175,13 @@ nav {
   color: #FFF;
   text-align: center;
   text-decoration: none;
-  div {
-    margin: 32px 0 0;
-  }
-  .icon-camera {
-    margin: 8px 0 0;
-    font-size: 54px;
-    display: inline-block;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  &__label{
+    margin: 25px 0 0;
   }
 }
+
+.icon-camera {
+  margin: 8px 0 0;
+  font-size: 54px;
+}
+

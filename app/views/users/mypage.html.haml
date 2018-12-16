@@ -1,3 +1,4 @@
+= render partial: "/layouts/header"
 .mypage
   %main.mypage__main
     .mypage__main__right
@@ -5,7 +6,9 @@
         %a{href: "https://www.mercari.com/jp/u/914898503/"}
           %figure
             %img{alt: "", height: "60", src: "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png",width: "60"}/
-          %h2.mypage__main__right__top__profile--bold Mac
+          %h2.mypage__main__right__top__profile--bold
+            = @user.nickname do
+              / %input{type: "text", value: @user.nickname}/
           .mypage__main__ritht__top__profile__number
             .mypage__main__right__top__profile__evaluation
               評価
@@ -56,3 +59,4 @@
           %ul#mypage-tab-transaction-old
             %li.mypage__main__right__bottom__content__item-list--not-found.bold 過去に取引した商品がありません
     = render partial:'sidebar'
+= render partial: "/layouts/footer"

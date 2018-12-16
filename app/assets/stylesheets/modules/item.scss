@@ -67,6 +67,24 @@
     padding-bottom: 40px;
     margin-bottom: 40px;
     border-bottom: 1px solid $gray;
+    &__label{
+      font-size: 14px;
+      font-weight: bold;
+      margin: 40px 0 0 40px;
+      &::after {
+        background-color: $red;
+        content: "必須";
+        font-size: 8px;
+        font-weight:100;
+        color: $white;
+        border-radius:2px;
+        display: inline-block;
+        margin-left: 8px;
+        position:relative;
+        padding: 3px 6px;
+        top: -2px;
+      }
+    }
     &__subtitle{
       margin: 6px 0 12px 40px;
       font-size: 12px;
@@ -210,22 +228,3 @@
     width: 200px;
   }
 }
-h3{
-  font-size: 14px;
-  font-weight: bold;
-  margin: 40px 0 0 40px;
-  &::after {
-    background-color: $red;
-    content: "必須";
-    font-size: 8px;
-    font-weight:100;
-    color: $white;
-    border-radius:2px;
-    display: inline-block;
-    margin-left: 8px;
-    position:relative;
-    padding: 3px 6px;
-    top: -2px;
-  }
-}
-
