@@ -10,10 +10,24 @@
           出品画像
         .item__photoupload__subtitle
           最大４枚までアップロードできます
-          .item__photoupload__image
-          =f.fields_for :images do |i|
-            =i.file_field :image, type: "file"
-            / =i.file_field :image, type: "file", multiple: true, style: "display:none;"
+
+
+
+        
+          %ul.item__photoupload__image
+            / field_forでimageモデルを指定し、変数imgに入れる
+            =f.fields_for :images do |i|
+              %li
+                = i.file_field :image, type: "file", class: "upload-photo"
+                = image_tag "", size:"130*130", class: "preview"
+                / = image_tag :image, src:"", height: "130", width: "130", class: "preview"
+
+
+
+
+
+
+      / =i.file_field :image, type: "file", multiple: true, style: "display:none;"
       .item__upload
         .form-group
           = f.label "商品名", class: "form-group__label"

@@ -96,6 +96,10 @@
       margin: 0 auto;
       background: $gray;
       border: 1px dashed $light-gray;
+      display:flex;
+      &__li{
+        display: inline-block;
+      }
     }
   }
   &__upload{
