@@ -1,23 +1,21 @@
 .default-container
-  / ヘッダーここから
   = render partial: "/layouts/header"
-  / ヘッダーここまで
   .main-contents
-    .main-contents-images
-      javascriptで画面遷移を実装予定
-      %img{:src => "https://www-mercari-jp.akamaized.net/assets/img/common/jp/top/main_content_pc.png?1621863497"}/
-      / 画像３枚をスクロールさせるjavascriptを実装
-    .main-contents-nav
-      /
-        javascriptでナビゲーションの実装
-        <div class="contents-nav-prev">prev</div>
-        <div class="contents-nav-next">next</div>
-        </div>
-        <div class="main-contents-dots">
-        javascriptでドットの実装
-        <div class="contents-dots"></div>
-        <div class="contents-dots"></div>
-        <div class="contents-dots-active"></div>
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          = link_to do
+            %img.banner-slider{ src: "https://www.mercari.com/jp/assets/img/common/jp/top/top-banner-kusanagi-xmas.jpg"}
+        .swiper-slide
+          = link_to do
+            %img.banner-slider{ src: "https://www.mercari.com/jp/assets/img/common/jp/top/top-banner-new-register.png"}
+        .swiper-slide
+          = link_to do
+            %img.banner-slider.welcome{ src: "https://www.mercari.com/jp/assets/img/common/jp/top/top-banner-welcome.png"}
+      .swiper-pagination
+      .swiper-button-prev
+      .swiper-button-next
+
     .pickup-contents
       %h2.pickup-contents-header ピックアップカテゴリー
       .items-box-container.clearfix
@@ -246,62 +244,61 @@
                   %p.item-box-tax (税込)
         .view-all
           %a{:href => " "} すべての商品を見る
-      .pickup-contents
-        %h2.pickup-contents-header ピックアップブランド
-        .items-box-container.clearfix
-          %h3.text-center
-            %a{:href => " "} シャネル新着アイテム
-          .items-box-content.clearfix
-            %section.items-box
-              %a{:href => " "}
-                %figure.items-box-photo
-                  %img{:src => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436"}/
-                .items-box-body
-                  %h3.items-box-name.font-2 （１）シャネル新着アイテム
-                  .items-box-num
-                    .items-box-price.font-5 ¥ 2,500
-                    .items-box-likes.font-2
-                      = fa_icon 'heart'
-                      %span 16
-                    %p.item-box-tax (税込)
-            %section.items-box
-              %a{:href => " "}
-                %figure.items-box-photo
-                  %img{:src => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436"}/
-                .items-box-body
-                  %h3.items-box-name.font-2 （２）シャネル新着アイテム
-                  .items-box-num
-                    .items-box-price.font-5 ¥ 2,500
-                    .items-box-likes.font-2
-                      = fa_icon 'heart'
-                      %span 16
-                    %p.item-box-tax (税込)
-            %section.items-box
-              %a{:href => " "}
-                %figure.items-box-photo
-                  %img{:src => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436"}/
-                .items-box-body
-                  %h3.items-box-name.font-2 （３）シャネル新着アイテム
-                  .items-box-num
-                    .items-box-price.font-5 ¥ 2,500
-                    .items-box-likes.font-2
-                      = fa_icon 'heart'
-                      %span 16
-                    %p.item-box-tax (税込)
-            %section.items-box
-              %a{:href => " "}
-                %figure.items-box-photo
-                  %img{:src => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436"}/
-                .items-box-body
-                  %h3.items-box-name.font-2 （４）シャネル新着アイテム
-                  .items-box-num
-                    .items-box-price.font-5 ¥ 2,500
-                    .items-box-likes.font-2
-                      = fa_icon 'heart'
-                      %span 16
-                    %p.item-box-tax (税込)
-          .view-all
-            %a{:href => " "} すべての商品を見る
-    / フッターここから
-    = render partial: "/layouts/footer"
-    / フッターここまで
+    .pickup-contents
+      %h2.pickup-contents-header ピックアップブランド
+      .items-box-container.clearfix
+        %h3.text-center
+          %a{:href => " "} シャネル新着アイテム
+        .items-box-content.clearfix
+          %section.items-box
+            %a{:href => " "}
+              %figure.items-box-photo
+                %img{:src => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436"}/
+              .items-box-body
+                %h3.items-box-name.font-2 （１）シャネル新着アイテム
+                .items-box-num
+                  .items-box-price.font-5 ¥ 2,500
+                  .items-box-likes.font-2
+                    = fa_icon 'heart'
+                    %span 16
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{:href => " "}
+              %figure.items-box-photo
+                %img{:src => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436"}/
+              .items-box-body
+                %h3.items-box-name.font-2 （２）シャネル新着アイテム
+                .items-box-num
+                  .items-box-price.font-5 ¥ 2,500
+                  .items-box-likes.font-2
+                    = fa_icon 'heart'
+                    %span 16
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{:href => " "}
+              %figure.items-box-photo
+                %img{:src => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436"}/
+              .items-box-body
+                %h3.items-box-name.font-2 （３）シャネル新着アイテム
+                .items-box-num
+                  .items-box-price.font-5 ¥ 2,500
+                  .items-box-likes.font-2
+                    = fa_icon 'heart'
+                    %span 16
+                  %p.item-box-tax (税込)
+          %section.items-box
+            %a{:href => " "}
+              %figure.items-box-photo
+                %img{:src => "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m11982650864_1.jpg?1528301436"}/
+              .items-box-body
+                %h3.items-box-name.font-2 （４）シャネル新着アイテム
+                .items-box-num
+                  .items-box-price.font-5 ¥ 2,500
+                  .items-box-likes.font-2
+                    = fa_icon 'heart'
+                    %span 16
+                  %p.item-box-tax (税込)
+        .view-all
+          %a{:href => " "} すべての商品を見る
+  = render partial: "/layouts/footer"
+
