@@ -18,7 +18,7 @@
             / field_forでimageモデルを指定し、変数imgに入れる
             =f.fields_for :images do |i|
               %li
-                = i.file_field :image, type: "file", class: "upload-photo"
+                = i.file_field :image, type: "file", class: "upload-photo", multiple: true
                 = image_tag "", width: "100px", class: "preview"
                 / = image_tag :image, src:"", height: "130", width: "130", class: "preview"
 

@@ -3,13 +3,14 @@ $(document).on('turbolinks:load', function(){
 		$('.upload-photo').on('change', function(e){
 			//イベントを発生させたオブジェクトを変数fileに入れる
 			var file = e.target.files[0];
-			console.log(file)
+			var fileLength = e.target.files.length;
+			console.log(fileLength)
 			// FileReaderでfileオブジェクトの中身を取得してreaderに入れる
 			var reader = new FileReader();
-			console.log(reader)
+			// console.log(reader)
 			//HTMLのimgタグのオブジェクトをpreviewに入れる
 			var preview  = $(".preview");
-			console.log(preview)
+			// console.log(preview)
 
 
 
