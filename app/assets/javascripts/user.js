@@ -1,11 +1,14 @@
+$(document).on('turbolinks:load', function() {
+// 上記はjqによる非同期通信を有効化させるコード（このコードがなければturbolinksの動きにより、jqの非同期通信がされない）
 $(function() {
 
   // ①タブをクリックしたら発動
   $('.mypage__main__right__middle__tabs li').click(function(e) {
 
+
     // ②クリックされたタブの順番を変数に格納
     var index = $('.mypage__main__right__middle__tabs li').index(this);
-    // console.log(index);
+
     // ③クリック済みタブのデザインを設定したcssのクラスを一旦削除
     $('.mypage__main__right__middle__tabs li').removeClass('mypage__main__right__middle__tabs--active');
 
@@ -38,6 +41,7 @@ $(function() {
     // ⑤コンテンツを一旦非表示にし、クリックされた順番のコンテンツのみを表示
     $('.mypage__main__right__bottom__content ul').removeClass('mypage__main__right__bottom__content__item-list').eq(index).addClass('mypage__main__right__bottom__content__item-list');
     e.preventDefault();
+    });
   });
 });
 
