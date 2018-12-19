@@ -1,12 +1,5 @@
-// window.addEventListener('load', function() {
-//     var swiper = new Swiper('.swiper-container', {
-//     loop: true,
-//     pagination: '.swiper-pagination',
-//     nextButton: '.swiper-button-next',
-//     prevButton: '.swiper-button-prev'
-//     });
-//     }, false);
-
+$(document).on('turbolinks:load', function() {
+// 上記はjqによる非同期通信を有効化させるコード（このコードがなければturbolinksの動きにより、jqの非同期通信がされない）
 $( function() {
 var swiper = new Swiper('.swiper-container', {
   navigation: {
@@ -19,8 +12,9 @@ var swiper = new Swiper('.swiper-container', {
   loop: true,
   autoplay: {
     delay: 3000,
-    disableOnInteraction: true
-  },
-});
+    disableOnInteraction: false
+      },
+    });
+  });
 });
 
