@@ -11,7 +11,7 @@ $(document).on('turbolinks:load', function(){
 		      	return function(onloadEvent){
 		      		var imageContainer = $(changeEvent.target).siblings().filter('.preview');
 		      		imageContainer.attr("src", onloadEvent.target.result);
-		      		imageContainer.attr("size", onloadEvent.target.result);
+		      		imageContainer.attr({height:"100px;", width:"100px"}, onloadEvent.target.result);
 		      	}
 			})(file);
 

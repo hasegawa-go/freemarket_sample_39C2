@@ -13,12 +13,13 @@
 
 
 
-          %ul.item__photoupload__image
-            =f.fields_for :images do |i|
-              %li
-                = i.file_field :image, type: "file", class: "upload-photo"
-                = image_tag "", width: "100px", height: "100px", class: "preview", overflow: "hidden"
-                / = image_tag :image, src:"", height: "130", width: "130", class: "preview",style: "display:none;
+        %ul
+        .item__photoupload__image
+          =f.fields_for :images do |i|
+            %li.item__photoupload__image__list
+              = i.file_field :image, type: "file", class: "upload-photo"
+              = image_tag "", class: "preview"
+              / = image_tag :image, src:"", height: "130", width: "130", class: "preview",style: "display:none;
 
       .item__upload
         .form-group

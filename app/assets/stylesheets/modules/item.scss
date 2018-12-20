@@ -67,6 +67,7 @@
     padding-bottom: 40px;
     margin-bottom: 40px;
     border-bottom: 1px solid $gray;
+    background-color: red;
     &__label{
       font-size: 14px;
       font-weight: bold;
@@ -90,15 +91,16 @@
       font-size: 12px;
     }
     &__image{
-      height: 102px;
+      height: 130px;
       width: 580px;
       padding: 20px;
       margin: 0 auto;
-      background: $gray;
+      background: pink;
       border: 1px dashed $light-gray;
       display:flex;
-      &__li{
+      &__list{
         display: inline-block;
+        overflow: hidden !important;
       }
     }
   }
