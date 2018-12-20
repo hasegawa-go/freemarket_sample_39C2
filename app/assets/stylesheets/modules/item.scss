@@ -46,6 +46,9 @@
   }
 }
 
+.photo-label{
+  // opacity: 0;
+}
 
 .item{
 	max-width: 700px;
@@ -67,7 +70,6 @@
     padding-bottom: 40px;
     margin-bottom: 40px;
     border-bottom: 1px solid $gray;
-    background-color: red;
     &__label{
       font-size: 14px;
       font-weight: bold;
@@ -91,16 +93,19 @@
       font-size: 12px;
     }
     &__image{
-      height: 130px;
       width: 580px;
       padding: 20px;
-      margin: 0 auto;
-      background: pink;
+      margin: 0 40px;
       border: 1px dashed $light-gray;
-      display:flex;
+      display: flex;
       &__list{
         display: inline-block;
-        overflow: hidden !important;
+        list-style: none;
+        height: 120px;
+        width: 100px;
+        background-color: $gray;
+        margin: 10px auto;
+        overflow: hidden;
       }
     }
   }

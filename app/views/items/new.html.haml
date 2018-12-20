@@ -11,15 +11,13 @@
         .item__photoupload__subtitle
           最大４枚までアップロードできます
 
-
-
-        %ul
-        .item__photoupload__image
+        / ＊＊ーーーー画像のアップロード・プレビューーーーー＊＊
+        %ul.item__photoupload__image
           =f.fields_for :images do |i|
             %li.item__photoupload__image__list
-              = i.file_field :image, type: "file", class: "upload-photo"
-              = image_tag "", class: "preview"
-              / = image_tag :image, src:"", height: "130", width: "130", class: "preview",style: "display:none;
+              = i.label :image, class: "photo-label" do
+                = i.file_field :image, type: "file", class: "upload-photo"
+                = image_tag "", class: "preview"
 
       .item__upload
         .form-group
