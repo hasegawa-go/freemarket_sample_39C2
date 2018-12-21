@@ -11,23 +11,14 @@
         .item__photoupload__subtitle
           最大４枚までアップロードできます
 
-
-
-        
-          %ul.item__photoupload__image
-            / field_forでimageモデルを指定し、変数imgに入れる
-            =f.fields_for :images do |i|
-              %li
+        / ＊＊ーーーー画像のアップロード・プレビューーーーー＊＊
+        %ul.item__photoupload__image
+          =f.fields_for :images do |i|
+            %li.item__photoupload__image__list
+              = i.label :image, class: "photo-label" do
                 = i.file_field :image, type: "file", class: "upload-photo"
-                = image_tag "", width: "100px", class: "preview"
-                / = image_tag :image, src:"", height: "130", width: "130", class: "preview"
+                = image_tag "", class: "preview"
 
-
-
-
-
-
-      / =i.file_field :image, type: "file", multiple: true, style: "display:none;"
       .item__upload
         .form-group
           = f.label "商品名", class: "form-group__label"

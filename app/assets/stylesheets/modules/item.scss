@@ -46,6 +46,9 @@
   }
 }
 
+.photo-label{
+  // opacity: 0;
+}
 
 .item{
 	max-width: 700px;
@@ -90,15 +93,19 @@
       font-size: 12px;
     }
     &__image{
-      height: 102px;
       width: 580px;
       padding: 20px;
-      margin: 0 auto;
-      background: $gray;
+      margin: 0 40px;
       border: 1px dashed $light-gray;
-      display:flex;
-      &__li{
+      display: flex;
+      &__list{
         display: inline-block;
+        list-style: none;
+        height: 120px;
+        width: 100px;
+        background-color: $gray;
+        margin: 10px auto;
+        overflow: hidden;
       }
     }
   }

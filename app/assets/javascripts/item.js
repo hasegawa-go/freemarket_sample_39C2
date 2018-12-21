@@ -1,26 +1,35 @@
+// ターボリンクスに必ずこのドキュメントを読んでもらう
 $(document).on('turbolinks:load', function(){
-	$(function previewFile (){
-		$('.upload-photo').on('change', function(e){
-			//イベントを発生させたオブジェクトを変数fileに入れる
-			var file = e.target.files[0];
-			console.log(file)
-			// FileReaderでfileオブジェクトの中身を取得してreaderに入れる
-			var reader = new FileReader();
-			console.log(reader)
-			//HTMLのimgタグのオブジェクトをpreviewに入れる
-			var preview  = $(".preview");
-			console.log(preview)
+
+	// file_fieldで画像が選択されたら
+	$('.upload-photo').on('change', function(changeEvent){
+
+		// 選んだ画像の１個目をfileに入れる
+		var file = changeEvent.target.files[0];
+
+		// ユーザのコンピュータ内にあるファイルのデータを非同期的に読み込み変数readerに入れる
+		var reader = new FileReader();
 
 
+		// 変数readerのコンテンツの読み込みが完了したら
+	    reader.onload = (function (file) {
 
- 			//オブジェクトを読み込んでから処理を実行する
-      reader.onload = (function (file) {
-      	return function(e){
-      		$(".preview").attr("src", e.target.result);
-      		$(".preview").attr("size", e.target.result);
-      	}
-			})(file);
-			reader.readAsDataURL(file);
-		})
-  })
+	    	// この関数の値を返す
+	      	return function(onloadEvent){
+
+	      		// 兄弟要素<li>でpreviewにマッチする要素を変数imagecontainerに入れる
+	      		var imageContainer = $(changeEvent.target).siblings().filter('.preview');
+
+	      		// imageContainerに属性値を追加する
+	      		imageContainer.attr("src", onloadEvent.target.result);
+	      		imageContainer.attr({height:"100px;", width:"100px"}, onloadEvent.target.result);
+	      	}
+
+	    // 引数にfileの値を入れて渡す
+		})(file);
+
+		// ファイルオブジェクトをURに変換する
+		reader.readAsDataURL(file);
+	})
 })
+
